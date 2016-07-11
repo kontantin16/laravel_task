@@ -1,4 +1,5 @@
 <?php
+
 Route::group(['prefix' => 'admin'], function() {
     Route::get('sphere/data', 'Admin\SphereController@data');
     Route::get('agent/data', 'Admin\AgentController@data');
@@ -12,3 +13,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'we
 
     include('routes/admin.routes.php');
 });
+
+Route::get('task', ['as' => 'task', 'uses' => 'TaskController@index']);
+Route::post('detail', 'TaskController@detail'); 

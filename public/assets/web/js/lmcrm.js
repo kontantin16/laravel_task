@@ -101,3 +101,23 @@ $(function(){
 		dTable.ajax.reload();
 	});
 });
+
+  $(document).ready(function(){
+		
+		$('#table1 #add_detail').on('click', function(){
+		$.ajax({
+        type: 'post',
+        url: 'detail',
+        dataType: 'html',
+        headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+        data: { id: $(this).attr("data-id")}, 
+		success: function(data) {
+          var res = JSON.parse(data);
+		  $('.detail').html(res);
+        }
+       })
+       })
+	 
+    });

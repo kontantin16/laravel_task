@@ -190,3 +190,7 @@ footer,.footer,#footer{
 	font-family: FontAwesome;
 	content: "\f077";
 }
+
+#add_detail:hover {
+	background-color: #D3D3D3;
+}

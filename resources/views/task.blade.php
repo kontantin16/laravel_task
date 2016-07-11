@@ -29,3 +29,4 @@
   </table>
 <div class="detail"></div>
 @stop
+
